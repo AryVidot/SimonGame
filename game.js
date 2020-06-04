@@ -15,15 +15,15 @@ function nextSequence() {
   $("#" + randomChosenColour)
     .fadeOut(100)
     .fadeIn(100);
+
+  var audio = new Audio("sounds/" + randomChosenColour + ".mp3");
+  audio.play();
 }
 
-nextSequence();
-console.log(gamePattern);
+nextSequence() + 1;
+// console.log(gamePattern);
 
-var sound = new Audio("sounds/" + nextSequence + ".mp3");
-sound.play();
-
-//  Detecting mouse click
-// $("btn").click(function (event) {
-//   $("btn").addClass("pressed");
-// });
+$("btn").click(function () {
+  console.log("btn was clicked");
+});
+// var userChosenColour = document.
